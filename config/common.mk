@@ -257,7 +257,7 @@ endif
 
 # Filter out random types, so it'll reset to UNOFFICIAL
 ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL OFFICIAL,$(candy5_BUILDTYPE)),)
-    candy5_BUILDTYPE :=
+    candy5_BUILDTYPE := OFFICIAL
 endif
 
 ifdef candy5_BUILDTYPE
