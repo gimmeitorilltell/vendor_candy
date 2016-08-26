@@ -1,3 +1,2 @@
 
 allow dumpstate media_rw_data_file:dir search;
-allow dumpstate sdcardfs:file getattr;
