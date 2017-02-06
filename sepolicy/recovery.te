@@ -19,6 +19,7 @@ allow recovery tmpfs:sock_file create_file_perms;
 #allow recovery rootfs:dir { write create rmdir add_name remove_name };
 
 # Read storage files and directories
+allow recovery tmpfs:dir mounton;
 allow recovery media_rw_data_file:dir r_dir_perms;
 allow recovery media_rw_data_file:file r_file_perms;
 allow recovery vfat:dir r_dir_perms;
@@ -44,4 +45,6 @@ allow recovery recovery_prop:property_service set;
 allow recovery cache_recovery_file:dir create_dir_perms;
 allow recovery cache_recovery_file:file create_file_perms;
 
+# set system properties for various things
+allow recovery system_prop:property_service set;
 ')
