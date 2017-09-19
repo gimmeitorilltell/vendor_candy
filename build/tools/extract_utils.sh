@@ -629,7 +629,7 @@ function extract() {
         local DEST="$OUTPUT_DIR/$FROM"
 
         if [ "$SRC" = "adb" ]; then
-            # Try CM target first
+            # Try LOS target first
             adb pull "/$TARGET" "$DEST"
             # if file does not exist try OEM target
             if [ "$?" != "0" ]; then
@@ -638,7 +638,7 @@ function extract() {
         else
             # Try OEM target first
             cp "$SRC/$FILE" "$DEST"
-            # if file does not exist try CM target
+            # if file does not exist try LOS target
             if [ "$?" != "0" ]; then
                 cp "$SRC/$TARGET" "$DEST"
             fi

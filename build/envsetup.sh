@@ -97,13 +97,13 @@ function cmremote()
         echo "Not in a git directory. Please run this from an Android repository you wish to set up."
         return
     fi
-    git remote rm cm 2> /dev/null
+    git remote rm los 2> /dev/null
 
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
     pfx="android_"
     project="${proj//\//_}"
-    git remote add cm "git@github.com:CyanogenMod/$pfx$project"
-    echo "Remote 'cm' created"
+    git remote add los "git@github.com:LineageOS/$pfx$project"
+    echo "Remote 'los' created"
 }
 
 function aospremote()
@@ -148,7 +148,7 @@ function cafremote()
 function candy_push()
 {
     local branch ssh_name path_opt proj
-    branch="c7.1.1"
+    branch="c8.0"
     ssh_name="candy_review"
     path_opt=
 
@@ -187,6 +187,6 @@ function hmm() #hidden
 
 candy_append_hmm "candyremote" "Add a git remote for matching Candy repository"
 candy_append_hmm "slimremote" "Add a git remote for matching SLIM repository"
-candy_append_hmm "cmremote" "Add a git remote for matching CM repository"
+candy_append_hmm "losremote" "Add a git remote for matching LINEAGE repository"
 candy_append_hmm "aospremote" "Add git remote for matching AOSP repository"
 candy_append_hmm "cafremote" "Add git remote for matching CodeAurora repository."
