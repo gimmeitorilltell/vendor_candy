@@ -102,7 +102,11 @@ PRODUCT_COPY_FILES += \
     vendor/candy/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/candy/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# # Required packages
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/nexus/prebuilt/bin/clean_cache.sh:system/bin/clean_cache.sh
+
+# Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     LockClock
@@ -225,3 +229,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Google sounds
 include vendor/candy/google/GoogleAudio.mk
+
+
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/nexus/prebuilt/bin/clean_cache.sh:system/bin/clean_cache.sh
