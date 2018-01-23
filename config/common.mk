@@ -169,6 +169,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/extra/product.mk
 
 PRODUCT_PACKAGES += \
+    DuiDarkTheme \
     AndroidDarkThemeOverlay \
     SettingsDarkThemeOverlay \
     PixelTheme \
