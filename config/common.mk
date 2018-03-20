@@ -168,12 +168,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
+# Packages
 PRODUCT_PACKAGES += \
     DuiDarkTheme \
-    AndroidDarkThemeOverlay \
-    SettingsDarkThemeOverlay \
+    SettingsDarkTheme \
+    SystemDarkTheme \
     PixelTheme \
     Stock
+
+# Overlays
+PRODUCT_PACKAGES += \
+    AmberAccent \
+    BlackAccent \
+    BlueAccent \
+    BlueGreyAccent \
+    BrownAccent \
+    CyanAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    GreenAccent \
+    GreyAccent \
+    IndigoAccent \
+    LightBlueAccent \
+    LightGreenAccent \
+    LimeAccent \
+    OrangeAccent \
+    PinkAccent \
+    PurpleAccent \
+    RedAccent \
+    TealAccent \
+    YellowAccent \
+    WhiteAccent
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy/overlay/common
 
