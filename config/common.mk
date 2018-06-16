@@ -118,10 +118,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
-# Prebuilt packages
-PRODUCT_PACKAGES += \
-    PixelLauncher
-
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
